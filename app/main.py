@@ -1,6 +1,6 @@
-from chatModule import chat
+from farmModule import farm
 from fastapi import Depends, FastAPI
-from assessmentModule import assessment
+from userModule import user
 from fastapi.middleware.cors import CORSMiddleware
 
 origins = [
@@ -17,5 +17,5 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(chat.router)
-app.include_router(assessment.router)
+app.include_router(user.router)
+app.include_router(farm.router)
